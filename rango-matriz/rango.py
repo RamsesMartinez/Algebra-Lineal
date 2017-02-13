@@ -13,11 +13,6 @@ class Matriz(object):
 		self.columnas = 1
 		self.rango = 1
 
-	def __init__(self, filas, columnas):
-		self.filas = filas
-		self.columnas = columnas
-		self.rango = self.calcular_rango()
-
 	def calcular_rango(self):
 		self.rango = 0
 
@@ -39,7 +34,9 @@ def main():
 
     filas = input('Ingresa cantidad de filas: \t')
     columnas = input('Ingrese cantidad de columnas: \t')
-    matriz = Matriz(filas, columnas)
+    matriz = Matriz()
+    matriz.set_filas(filas)
+    matriz.set_filas(columnas)
 
 
 if __name__ == '__main__':
